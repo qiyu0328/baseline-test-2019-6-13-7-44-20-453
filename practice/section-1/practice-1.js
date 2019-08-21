@@ -1,17 +1,14 @@
 'use strict';
 
 function collectSameElements(collectionA, collectionB) {
-  let newArr = [];
-  for (let i = 0; i < collectionB.length; i++) {
-    for (let j = 0; j < collectionA.length; j++) {
-      if(collectionA[j] === collectionB[i]){
-        newArr.push(collectionA[j]);
-      }
+var result=[];
+  for (let i=0;i<collectionA.length;i++){
+  for (let j=0;j<collectionB.length;j++){
+    if (collectionA[i]===collectionB[j]){
+      result.push(collectionA[i]);
     }
   }
+}
 
-  let temp = newArr[1];
-  newArr.splice(1,1);
-  newArr.push(temp);
-  return newArr;
-  }
+  return result;
+}
